@@ -82,7 +82,8 @@
 |------|------|------|
 | ESP32C3 Super Mini | ¥9.5 | [淘宝](淘宝秒杀可以做到8元)不推荐YX，有概率买到wifi信号不好的 |
 | ML307R-DC 移动联通 核心板 不能来电提醒 | ¥16.8 | duyun 貌似不送天线 |
-| ML307A-DSLN或者ML307A-DCLN  全网通 | ¥28.8/21.8 | 同上 送天线 |
+| ML307A-DSLN  全网通可来电提醒 | ¥28.8 | 同上 我买的送天线 |
+| ML307A-DCLN  全网通 | ¥28.8 | 同上 我买的送天线 |
 | 4G 天线 | 0.xx元 | 不建议花2元同模块一起购买，自己搜FPC 4G天线 几毛1个，2块多买好几个 |
 
 ## 接线方式
@@ -93,57 +94,22 @@
 
 
 简单说就是：
-- 8Pin排母*2
-- 5Pin排母*2
-- 需要12V供电可加DC母座+12V转5V模块
+- 8Pin排母*2 + 8Pin直排针
+- 5Pin排母*2 + 5Pin弯排针
+- 需要12V供电可加DC母座 + 12V转5V模块
 
 ## 烧录步骤
 
-### 1. 安装 Arduino IDE
-
-下载安装 [Arduino IDE](https://www.arduino.cc/en/software)
-
-### 2. 添加 ESP32 支持
-
-1. 打开 Arduino IDE，点击 **文件 → 首选项**
-2. 在"附加开发板管理器网址"填入：
-```
-   https://espressif.github.io/arduino-esp32/package_esp32_index.json
-```
-3. 点击 **工具 → 开发板 → 开发板管理器**
-4. 搜索 `esp32`，安装 **esp32 by Espressif Systems**
-
-### 3. 安装依赖库
-
-点击 **工具 → 管理库**，搜索并安装：
-- **ReadyMail** by Mobizt
-- **pdulib** by David Henry
-- **PubSubClient** by Nick O'Leary
-
-### 4. 配置 WiFi
-
-打开 `code/wifi_config.h`，修改成你的 WiFi：
-
-```cpp
-#define WIFI_SSID "你的WiFi名"
-#define WIFI_PASS "你的WiFi密码"
-```
-
-### 5. 上传程序
-
-1. 用 USB 线连接 ESP32C3 到电脑
-2. 选择开发板：**工具 → 开发板 → esp32 → MakerGO ESP32 C3 SuperMini**
-3. 更改存储分配：**工具 → Partition Scheme:xxxx → Huge app**
-4. 选择端口：**工具 → 端口 → （选择出现的COM口）**
-5. 点击上传按钮 ➡️
+### 1. 自己百度一下
 
 ### 6. 开始使用
 
 1. 插入 SIM 卡到 ML307 模块
 2. 用 USB 给 ESP32 供电
-3. 打开手机连接同一个 WiFi
+3. 打开手机WiFi连接sms-xxxxxx的热点
 4. 浏览器访问：
-   - **推荐**：`http://sms.local`（无需记 IP，支持 Windows/macOS/iOS）
+   - 192.168.4.1配网
+   - **等待一会访问**：`http://sms.local`（无需记 IP，支持 Windows/macOS/iOS）
    - 或访问 ESP32 的 IP 地址（串口会打印）
 5. 默认账号密码：`admin` / `admin123`
 6. 在网页配置你想要的推送方式
@@ -317,21 +283,6 @@ mqtt:
 - 检查服务器地址和端口
 - 检查用户名密码是否正确
 - 确认服务器允许你的 IP 连接
-
-## 文件说明
-
-```
-code/
-├── code.ino              # 主程序
-├── wifi_config.h         # WiFi 配置（需要修改）
-├── config.h/.ino         # 配置管理
-├── web_pages.h           # 网页界面
-├── web_handlers.h/.ino   # 网页处理
-├── web_query.ino         # Ping 查询
-├── sms_handler.h/.ino    # 短信处理
-├── push_service.h/.ino   # 推送服务
-└── mqtt_handler.h/.ino   # MQTT 功能
-```
 
 
 ## License
