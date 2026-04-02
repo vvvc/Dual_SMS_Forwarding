@@ -98,6 +98,26 @@
 - 5Pin排母*2 + 5Pin弯排针
 - 需要12V供电可加DC母座 + 12V转5V模块
 
+DC-DC模块12v转5v
+
+<img src="assets/DC-DC-1.png" width="400" />
+
+<img src="assets/DC-DC-2.png" width="400" />
+
+<img src="assets/DC-DC-3.png" width="400" />
+
+
+
+PCB板
+
+<img src="assets/PCB.jpeg" width="400" />
+
+成品，ESP32C3还没换弯排针
+
+<img src="assets/over.jpeg" width="400" />
+
+
+
 ## 烧录步骤
 
 ### 1. 自己百度一下
