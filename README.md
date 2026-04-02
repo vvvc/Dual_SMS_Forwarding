@@ -110,7 +110,7 @@ DC-DC模块12v转5v
 
 PCB板
 
-<img src="assets/PCB.jpeg" width="400" />
+<img src="assets/PCB.jpg" width="400" />
 
 成品，ESP32C3还没换弯排针
 
