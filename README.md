@@ -88,6 +88,7 @@
 ## 接线方式
 
 <img src="assets/PCB.png" width="400" />
+[PCB开源地址](https://oshwhub.com/yvvv/project_shsjbzzd)
 
 #### 
 
