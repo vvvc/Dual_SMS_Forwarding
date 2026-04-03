@@ -88,9 +88,6 @@
 ## 接线方式
 
 <img src="assets/PCB.png" width="400" />
-[PCB开源地址](https://oshwhub.com/yvvv/project_shsjbzzd)
-
-#### 
 
 
 简单说就是：
@@ -109,6 +106,7 @@ DC-DC模块12v转5v
 
 
 PCB板
+[PCB开源地址](https://oshwhub.com/yvvv/project_shsjbzzd)
 
 <img src="assets/PCB.jpg" width="400" />
 
