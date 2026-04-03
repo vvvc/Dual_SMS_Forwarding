@@ -115,7 +115,9 @@ PCB板
 <img src="assets/over.jpeg" width="400" />
 
  6拖12，未打板验证
-<img src="assets/6TO12.png" width="400" />
+
+
+<img src="assets/6TO12.png" width="800" />
 
 ## 烧录步骤
 
